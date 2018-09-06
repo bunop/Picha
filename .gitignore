@@ -13,3 +13,6 @@ celerybeat-schedule.dir
 dump.rdb
 
 whoosh_index/
+
+# spyder project
+.spyproject/
