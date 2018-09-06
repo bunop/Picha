@@ -29,3 +29,13 @@ services:
       - .:/code
     depends_on:
       - redis
+
+  celery-flower:
+    build: .
+    command: celery -A picha flower --port=5555 --loglevel=info # --persistent=True
+    volumes:
+      - .:/code
+    ports:
+      - "5555:5555"
+    depends_on:
+      - redis
